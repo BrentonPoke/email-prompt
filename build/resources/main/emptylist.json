@@ -1,0 +1,23 @@
+{
+    "type": "document",
+    "children": [
+        {
+            "type": "list",
+            "children": [
+                {
+                    "type": "list-item",
+                    "children": [{ "type": "text", "content": "List item 1"}]
+                },
+                {
+                    "type": "list-item",
+                    "children": [{ "type": "text", "content": "List item 2"}]
+                }
+            ]
+        },
+        {
+            "type": "list",
+            "children": [
+            ]
+        }
+    ]
+}
