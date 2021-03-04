@@ -16,7 +16,6 @@ import org.xmlet.htmlapifaster.Ol;
 
 public class Main {
   public static void main(String[] args) {
-    PolymorphicTypeValidator ptv = BasicPolymorphicTypeValidator.builder().build();
     ObjectMapper mapper = new ObjectMapper();
 
     File file = new File("/home/brentonpoke/IdeaProjects/prompt/src/main/resources/email.json");
@@ -39,7 +38,7 @@ public class Main {
     //
   }
 
-  private static String normalize(Document doc, ObjectMapper mapper) {
+  public static String normalize(Document doc, ObjectMapper mapper) {
   
     ArrayList<ChildItem> children = doc.children;
     for (ChildItem i : children) {
@@ -76,7 +75,7 @@ public class Main {
     return ans;
   }
   
-  private static String render (Document doc){
+  public static String render (Document doc){
     
     Article<Div<HtmlView<Object>>> email = StaticHtml.view().div().article().attrClass("email");
     StringBuilder scratchPad = new StringBuilder();
@@ -86,7 +85,6 @@ public class Main {
       if (i.type.equals("paragraph")) {
         // this is terrible
         for (ChildItem j : i.children) {
-          // email.p().text(j.children).getParent().__();
           scratchPad.append(j.content);
         }
         email.p().text(scratchPad.toString()).__();
@@ -107,13 +105,11 @@ public class Main {
         }
       }
     }
-    
-      
-      //email.__();
+      ol.__();
     
     
     
     
-    return email.getParent().__().render();
+    return email.__().getParent().render();
   }
 }

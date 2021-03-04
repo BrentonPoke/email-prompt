@@ -80,6 +80,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/main/resources/emptylist.json">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/test/java/MainTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value="&#9;" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

@@ -24,6 +24,7 @@ dependencies {
     implementation group: 'com.github.xmlet', name: 'htmlflow', version: '3.6'
     testCompileOnly 'org.projectlombok:lombok:1.18.16'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testImplementation group: 'net.javacrumbs.json-unit', name: 'json-unit-assertj', version: '0.0.15'
 }
 
 test {
